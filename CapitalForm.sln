@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalForm.API", "CapitalForm.API\CapitalForm.API.csproj", "{7EF0313E-2A0B-45F9-9468-48198C790673}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA4EB6-1AB6-47FD-84F2-1AD17A3B8740}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9CF01F0B-5FD1-4716-8245-0A6741DE1DDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +22,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7EF0313E-2A0B-45F9-9468-48198C790673} = {02EA4EB6-1AB6-47FD-84F2-1AD17A3B8740}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02F38B8C-0530-4DE6-85AF-6AEE6F105566}
