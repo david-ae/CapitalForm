@@ -22,25 +22,6 @@ builder.Services.AddDbContext<ProgramContext>(options =>
         ) ;
 });
 
-builder.Services.AddSingleton((provider) =>
-{
-    var cosmoClientOptions = new CosmosClientOptions
-    {
-        ApplicationName = databaseName
-    };
-
-    var loggerFactory = LoggerFactory.Create(builder =>
-    {
-        builder.AddConsole();
-    });
-
-    var cosmosClient = new CosmosClient(Endpoint, key, cosmoClientOptions);
-
-    cosmosClient.ClientOptions.ConnectionMode = ConnectionMode.Gateway;
-
-    return cosmosClient;
-});
-
 // Add services
 builder.Services.AddControllers();
 
