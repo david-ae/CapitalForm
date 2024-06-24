@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalForm.API", "CapitalForm.API\CapitalForm.API.csproj", "{7EF0313E-2A0B-45F9-9468-48198C790673}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalForm.API", "CapitalForm.API\CapitalForm.API.csproj", "{7EF0313E-2A0B-45F9-9468-48198C790673}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA4EB6-1AB6-47FD-84F2-1AD17A3B8740}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9CF01F0B-5FD1-4716-8245-0A6741DE1DDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalForm.Core", "CapitalForm.Core\CapitalForm.Core.csproj", "{8B82B604-DF16-4C68-A340-7F6069B99821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalForm.Core", "CapitalForm.Core\CapitalForm.Core.csproj", "{8B82B604-DF16-4C68-A340-7F6069B99821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalForm.Infrastructure", "CapitalForm.Infrastructure\CapitalForm.Infrastructure.csproj", "{F72FB192-CB52-46E8-AEF2-8179C1703E7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalForm.Infrastructure", "CapitalForm.Infrastructure\CapitalForm.Infrastructure.csproj", "{F72FB192-CB52-46E8-AEF2-8179C1703E7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateways", "gateways", "{0CC945CB-059A-4AF5-8B27-8CEFC356DF82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalForm.Gateway.API", "CapitalForm.Gateway.API\CapitalForm.Gateway.API.csproj", "{8FF3BE54-AD60-47B0-9B24-0B74A94C3C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalForm.Gateway.Core", "CapitalForm.Gateway.Core\CapitalForm.Gateway.Core.csproj", "{899E2C3A-739B-4C2B-8FA3-1EEE823040CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,14 @@ Global
 		{F72FB192-CB52-46E8-AEF2-8179C1703E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F72FB192-CB52-46E8-AEF2-8179C1703E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F72FB192-CB52-46E8-AEF2-8179C1703E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FF3BE54-AD60-47B0-9B24-0B74A94C3C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF3BE54-AD60-47B0-9B24-0B74A94C3C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF3BE54-AD60-47B0-9B24-0B74A94C3C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF3BE54-AD60-47B0-9B24-0B74A94C3C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{899E2C3A-739B-4C2B-8FA3-1EEE823040CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{899E2C3A-739B-4C2B-8FA3-1EEE823040CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{899E2C3A-739B-4C2B-8FA3-1EEE823040CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{899E2C3A-739B-4C2B-8FA3-1EEE823040CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +53,8 @@ Global
 		{7EF0313E-2A0B-45F9-9468-48198C790673} = {02EA4EB6-1AB6-47FD-84F2-1AD17A3B8740}
 		{8B82B604-DF16-4C68-A340-7F6069B99821} = {02EA4EB6-1AB6-47FD-84F2-1AD17A3B8740}
 		{F72FB192-CB52-46E8-AEF2-8179C1703E7D} = {02EA4EB6-1AB6-47FD-84F2-1AD17A3B8740}
+		{8FF3BE54-AD60-47B0-9B24-0B74A94C3C1C} = {0CC945CB-059A-4AF5-8B27-8CEFC356DF82}
+		{899E2C3A-739B-4C2B-8FA3-1EEE823040CF} = {0CC945CB-059A-4AF5-8B27-8CEFC356DF82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02F38B8C-0530-4DE6-85AF-6AEE6F105566}
