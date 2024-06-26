@@ -1,4 +1,6 @@
 using CapitalForm.Gateway.Core.Http;
+using CapitalForm.Gateway.Core.ServiceContracts;
+using CapitalForm.Gateway.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,11 +11,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpClient<TemplateHttpClient>(c =>
+builder.Services.AddHttpClient<FormHttpClient>(c =>
 {
-    c.BaseAddress = new Uri(builder.Configuration.GetSection("").Value ?? "");
+    c.BaseAddress = new Uri(builder.Configuration.GetSection("ServiceUrl:BaseUrl").Value ?? "");
     c.Timeout = new TimeSpan(0, 30, 0);
 });
+
+builder.Services.AddScoped<ICapitalFormService, CapitalFormService>();
+builder.Services.AddScoped<IQuestionTypeService, QuestionTypeService>();
 
 var app = builder.Build();
 

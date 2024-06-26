@@ -33,7 +33,7 @@ namespace CapitalForm.Infrastructure.Repositories
             return this.entity.ToListAsync();
         }
 
-        public async Task<T> GetById(Guid Id)
+        public async Task<T?> GetById(Guid Id)
         {
             var entity = await _context.FindAsync<T>(Id);
             return entity;

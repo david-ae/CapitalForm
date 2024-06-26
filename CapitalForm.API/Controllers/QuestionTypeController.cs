@@ -24,7 +24,7 @@ namespace CapitalForm.API.Controllers
 
         [HttpGet("Questions/{Id}")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<QuestionTypeResponse>> GetQuestion([FromRoute] Guid Id)
+        public async Task<ActionResult<QuestionTypeResponse>> GetQuestion(Guid Id)
         {
             return Ok(await _questionTypeService.GetQuestion(Id));
         }

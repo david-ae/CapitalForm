@@ -14,7 +14,7 @@ namespace CapitalForm.Gateway.Core.Http
             Client = httpClient;
         }
 
-        public virtual async Task<TOut?> MakeRequestAsync<T, TOut>(string relativeAddress, HttpMethod method, T? postBody) where T : class
+        public virtual async Task<TOut?> MakeRequestAsync<T, TOut>(string relativeAddress, HttpMethod method, T? postBody = null) where T : class
         {
             var request = new HttpRequestMessage
             {
@@ -28,7 +28,7 @@ namespace CapitalForm.Gateway.Core.Http
             return await Send<TOut>(request);
         }
         
-        public virtual async Task<FileResult> MakeFileRequestAsync<T, TOut>(string relativeAddress, HttpMethod method, T? postBody) where T : class
+        public virtual async Task<FileResult> MakeFileRequestAsync<T, TOut>(string relativeAddress, HttpMethod method, T? postBody = null) where T : class
         {
             var request = new HttpRequestMessage
             {
@@ -38,10 +38,10 @@ namespace CapitalForm.Gateway.Core.Http
             };
 
             request.Headers.Authorization = Client.DefaultRequestHeaders.Authorization;
-            return await Send<TOut>(request);
+            return await Download(request);
         }
 
-        public virtual async Task<TOut?> MakeRequestRelativeAsync<T, TOut>(string relativeAddress, HttpMethod method, T? postBody) where T : class
+        public virtual async Task<TOut?> MakeRequestRelativeAsync<T, TOut>(string relativeAddress, HttpMethod method, T? postBody = null) where T : class
         {
             var request = new HttpRequestMessage
             {
